@@ -5,7 +5,7 @@
 from ..base import *
 try:
     import numpy
-except:
+except ImportError:
     pass
 
 
