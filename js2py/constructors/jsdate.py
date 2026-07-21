@@ -87,13 +87,13 @@ class PyJsDate(PyJs):
             return 'Invalid Date'
         try:
             dt = self.to_local_dt()
-        except:
+        except Exception:
             raise MakeError(
                 'TypeError',
                 'unsupported date range. Will fix in future versions')
         try:
             return dt.strftime(pattern)
-        except:
+        except Exception:
             raise MakeError(
                 'TypeError',
                 'Could not generate date string from this date (limitations of python.datetime)'
@@ -104,13 +104,13 @@ class PyJsDate(PyJs):
             return 'Invalid Date'
         try:
             dt = self.to_utc_dt()
-        except:
+        except Exception:
             raise MakeError(
                 'TypeError',
                 'unsupported date range. Will fix in future versions')
         try:
             return dt.strftime(pattern)
-        except:
+        except Exception:
             raise MakeError(
                 'TypeError',
                 'Could not generate date string from this date (limitations of python.datetime)'
